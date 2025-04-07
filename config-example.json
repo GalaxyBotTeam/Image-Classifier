@@ -18,6 +18,7 @@
     "webhook": "https://discord.com/api/webhooks/1234567890/abcdefg"
   },
   "status": {
+    "enabled": false,
     "id": "",
     "kumaBase": "https://uptime.example.com",
     "interval": 60000
