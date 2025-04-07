@@ -1,6 +1,6 @@
 {
   "name": "image-classifier",
-  "version": "2.0.2",
+  "version": "2.0.5",
   "description": "Image classifier using OpenAI Moderation API",
   "main": "src/index.ts",
   "scripts": {
