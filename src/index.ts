@@ -5,7 +5,7 @@ import {MinIO} from "./Utils/MinIO";
 import axios from "axios";
 
 async function start() {
-    Utils.log(logLevel.INFO, logModule.GALAXYBOT, "Starting GalaxyBot V4 - NSFW Classifier");
+    Utils.log(logLevel.INFO, logModule.GALAXYBOT, "Starting GalaxyBot- NSFW Classifier");
     new MinIO(config);
     new WebServer().start();
 }
@@ -13,7 +13,7 @@ async function start() {
 start().then(async () => {
     // Ready for Pterodactyl JS Egg
     console.log("Ready!")
-    Utils.log(logLevel.SUCCESS, logModule.GALAXYBOT, "GalaxyBot V4 - NSFW Classifier started");
+    Utils.log(logLevel.SUCCESS, logModule.GALAXYBOT, "GalaxyBot - NSFW Classifier started");
 
     if (config.status.enabled) {
         await status();
