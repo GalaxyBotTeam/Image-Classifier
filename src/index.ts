@@ -10,14 +10,17 @@ async function start() {
     new WebServer().start();
 }
 
-start().then(() => {
+start().then(async () => {
     // Ready for Pterodactyl JS Egg
     console.log("Ready!")
     Utils.log(logLevel.SUCCESS, logModule.GALAXYBOT, "GalaxyBot V4 - NSFW Classifier started");
 
-    setInterval(async () => {
+    if (config.status.enabled) {
         await status();
-    }, config.status.interval)
+        setInterval(async () => {
+            await status();
+        }, config.status.interval)
+    }
 }).catch((e) => {
     Utils.log(logLevel.ERROR, logModule.GALAXYBOT, e);
     process.exit(1);
