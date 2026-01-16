@@ -27,7 +27,7 @@ start().then(async () => {
 });
 
 async function status() {
-    await axios.get(`${config.status.kumaBase}/api/push/${config.status.id}?status=up&msg=OK&ping=42`).catch((e) => {
+    await axios.get(`${config.status.heartbeatUrl}?status=up&msg=OK&ping=42`).catch((e) => {
         Utils.log(logLevel.ERROR, logModule.GALAXYBOT, "Error while sending status to Kuma: ", e);
     })
 }

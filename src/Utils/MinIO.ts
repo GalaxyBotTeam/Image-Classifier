@@ -11,7 +11,7 @@ export class MinIO {
             endPoint: config.s3.endPoint,
             port: config.s3.useSSL ? undefined : config.s3.port,
             region: 'eu-central-1',
-            useSSL: true,
+            useSSL: config.s3.useSSL,
             accessKey: config.s3.accessKey,
             secretKey: config.s3.secretKey
         });

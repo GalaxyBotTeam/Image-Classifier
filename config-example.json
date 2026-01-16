@@ -19,8 +19,7 @@
   },
   "status": {
     "enabled": false,
-    "id": "",
-    "kumaBase": "https://uptime.example.com",
+    "heartbeatUrl": "https://uptime.example.com",
     "interval": 60000
   }
 }
